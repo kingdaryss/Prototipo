@@ -48,7 +48,7 @@
             this.txtDescricao.Size = new System.Drawing.Size(550, 223);
             this.txtDescricao.TabIndex = 2;
             this.txtDescricao.Text = "";
-            this.txtDescricao.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             // 
             // label3
             // 
@@ -84,6 +84,7 @@
             this.txtPatrimonio.Name = "txtPatrimonio";
             this.txtPatrimonio.Size = new System.Drawing.Size(182, 20);
             this.txtPatrimonio.TabIndex = 17;
+            this.txtPatrimonio.TextChanged += new System.EventHandler(this.txtPatrimonio_TextChanged);
             // 
             // label4
             // 
@@ -100,6 +101,7 @@
             this.txtSala.Name = "txtSala";
             this.txtSala.Size = new System.Drawing.Size(181, 20);
             this.txtSala.TabIndex = 19;
+            this.txtSala.TextChanged += new System.EventHandler(this.txtSala_TextChanged);
             // 
             // label5
             // 

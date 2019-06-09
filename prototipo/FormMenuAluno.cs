@@ -19,6 +19,7 @@ namespace prototipo
             InitializeComponent();
             this.login = login;
             this.menu = login.menu;
+            verifyEnabledButton();
         }
 
         private void FormMenuAluno_FormClosing(object sender, FormClosingEventArgs e)
@@ -31,22 +32,41 @@ namespace prototipo
             label1.Text = login.textUsername.Text;
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ListViewItem item = new ListViewItem(new[] { label1.Text, txtDescricao.Text, txtPatrimonio.Text, txtSala.Text});
-            menu.listView1.Items.Add(item);
-            txtDescricao.Clear();
-            txtPatrimonio.Clear();
-            txtSala.Clear();
-            MessageBox.Show("Já estamos analisando seu problema, aguarde!", "Problema enviado");
-            this.Hide();
-            login.Show();
+                ListViewItem item = new ListViewItem(new[] { label1.Text, txtDescricao.Text, txtPatrimonio.Text, txtSala.Text });
+                menu.listView1.Items.Add(item);
+                txtDescricao.Clear();
+                txtPatrimonio.Clear();
+                txtSala.Clear();
+                MessageBox.Show("Já estamos analisando seu problema, aguarde!", "Problema enviado");
+                this.Hide();
+                login.Show();
         }
 
+        private void txtPatrimonio_TextChanged(object sender, EventArgs e)
+        {
+            verifyEnabledButton();
+        }
+
+        private void txtSala_TextChanged(object sender, EventArgs e)
+        {
+            verifyEnabledButton();
+        }
+
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+            verifyEnabledButton();
+        }
+        private void verifyEnabledButton()
+        {
+            if (!(String.IsNullOrEmpty(txtDescricao.Text)) && !(String.IsNullOrEmpty(txtPatrimonio.Text)) && !(String.IsNullOrEmpty(txtSala.Text)))
+            {
+                button1.Enabled = true;
+            }
+            else
+                button1.Enabled = false;
+        }
     }
 }
