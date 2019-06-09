@@ -64,6 +64,7 @@ namespace prototipo
             menu.listView2.SelectedItems[0].SubItems[3].Text = menu.janelaAdd.textPatrimonio.Text;
             menu.listView2.SelectedItems[0].SubItems[4].Text = menu.janelaAdd.textSala.Text;
             menu.listView2.SelectedItems[0].SubItems[5].Text = menu.janelaAdd.textDescricao.Text;
+            Close();
         }
         private void textIpv4_KeyPress(object sender, KeyPressEventArgs e)
         {

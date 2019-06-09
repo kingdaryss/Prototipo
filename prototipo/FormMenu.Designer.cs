@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("302");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("302");
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,14 +55,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.tbxFiles2 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tbxFiles = new System.Windows.Forms.TextBox();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
-            this.tbxFiles = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tbxFiles2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -299,6 +298,40 @@
             this.panel3.TabIndex = 15;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(379, 360);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 21;
+            this.button7.Text = "Instalar";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // tbxFiles2
+            // 
+            this.tbxFiles2.Location = new System.Drawing.Point(200, 60);
+            this.tbxFiles2.Name = "tbxFiles2";
+            this.tbxFiles2.Size = new System.Drawing.Size(223, 20);
+            this.tbxFiles2.TabIndex = 20;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(429, 33);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(25, 20);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // tbxFiles
+            // 
+            this.tbxFiles.Location = new System.Drawing.Point(200, 34);
+            this.tbxFiles.Name = "tbxFiles";
+            this.tbxFiles.Size = new System.Drawing.Size(223, 20);
+            this.tbxFiles.TabIndex = 18;
+            // 
             // listView3
             // 
             this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -306,7 +339,7 @@
             this.listView3.FullRowSelect = true;
             this.listView3.GridLines = true;
             this.listView3.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView3.Location = new System.Drawing.Point(0, 34);
             this.listView3.Name = "listView3";
             this.listView3.Size = new System.Drawing.Size(183, 352);
@@ -327,44 +360,6 @@
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = "Instalar em Redes";
-            // 
-            // tbxFiles
-            // 
-            this.tbxFiles.Location = new System.Drawing.Point(200, 34);
-            this.tbxFiles.Name = "tbxFiles";
-            this.tbxFiles.Size = new System.Drawing.Size(223, 20);
-            this.tbxFiles.TabIndex = 18;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(429, 33);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(25, 20);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(379, 360);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "Instalar";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
-            // 
-            // tbxFiles2
-            // 
-            this.tbxFiles2.Location = new System.Drawing.Point(200, 60);
-            this.tbxFiles2.Name = "tbxFiles2";
-            this.tbxFiles2.Size = new System.Drawing.Size(223, 20);
-            this.tbxFiles2.TabIndex = 20;
             // 
             // FormMenu
             // 
@@ -434,7 +429,6 @@
         private System.Windows.Forms.TextBox tbxFiles;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button7;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox tbxFiles2;
     }
 }
