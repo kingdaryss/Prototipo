@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace prototipo
 {
@@ -21,6 +22,7 @@ namespace prototipo
         {
             InitializeComponent();
             this.login = login;
+            button7.Enabled = false;
         }
 
 
@@ -142,6 +144,47 @@ namespace prototipo
         private void FormMenu_Activated(object sender, EventArgs e)
         {
             label4.Text = login.textUsername.Text;
+        }
+
+        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenFile();
+        }
+        private void OpenFile()
+        {
+            OpenFileDialog open = new OpenFileDialog()
+            {
+                Title = "Escolha seu executável",
+                Filter = "Documento (*.exe) | *.exe",
+                FileName = ""
+            };
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                tbxFiles.Text = open.FileName;
+                tbxFiles2.Text = open.SafeFileName;
+                if(tbxFiles != null)button7.Enabled = true;
+            }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Todos os computadores na sala 302 estão ligados?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Por favor, aguarde...", "Instalando");
+
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
         }
     }
 }
