@@ -46,11 +46,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Matrícula:";
             // 
-            // lblMatricula
+            // txtMatricula
             // 
             this.txtMatricula.AutoSize = true;
             this.txtMatricula.Location = new System.Drawing.Point(56, 11);
-            this.txtMatricula.Name = "lblMatricula";
+            this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(35, 13);
             this.txtMatricula.TabIndex = 1;
             this.txtMatricula.Text = "label2";
@@ -109,6 +109,9 @@
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(424, 271);
+            this.MinimumSize = new System.Drawing.Size(424, 271);
             this.Name = "LerListView1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -137,6 +137,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDescricao);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(576, 378);
+            this.MinimumSize = new System.Drawing.Size(576, 378);
             this.Name = "FormMenuAluno";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
